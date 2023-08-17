@@ -1,0 +1,9 @@
+{
+  "name": "nekotoko-monorepo",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@moonrepo/cli": "^1.11.1"
+  }
+}
