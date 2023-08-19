@@ -16,9 +16,6 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "rootDir": ".",
-    "allowJs": true,
-    "paths": {
-      "@nekotoko/svc-auth": ["packages/svc-auth"]
-    }
+    "allowJs": true
   }
 }
