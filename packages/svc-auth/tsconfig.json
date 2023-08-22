@@ -7,6 +7,7 @@
     "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
     "plugins": [
@@ -38,5 +39,6 @@
         "transform": "typia/lib/transform"
       }
     ]
-  }
+  },
+  "exclude": ["./dist"]
 }
