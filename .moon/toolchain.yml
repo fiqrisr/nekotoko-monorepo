@@ -17,7 +17,8 @@ node:
   packageManager: 'pnpm'
 
   # The version of the package manager (above) to use.
-  pnpm: {}
+  pnpm:
+    version: '8.6.12'
 
   # Add `node.version` as a constraint in the root `package.json` `engines`.
   addEnginesConstraint: true
@@ -49,7 +50,7 @@ typescript:
   # projectConfigFileName: 'tsconfig.json'
 
   # Name of `tsconfig.json` file in the workspace root.
-  # rootConfigFileName: 'tsconfig.json'
+  rootConfigFileName: 'tsconfig.base.json'
 
   # Name of the config file in the workspace root that defines shared compiler
   # options for all project reference based config files.

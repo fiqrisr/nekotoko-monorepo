@@ -9,8 +9,12 @@
     "skipLibCheck": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "types": ["node"],
-    "lib": ["es2019"],
+    "types": [
+      "node"
+    ],
+    "lib": [
+      "es2019"
+    ],
     "declaration": true,
     "resolveJsonModule": true,
     "baseUrl": ".",
@@ -18,5 +22,12 @@
     "allowJs": true,
     "strict": true
   },
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ],
+  "references": [
+    {
+      "path": "packages/svc-auth"
+    }
+  ]
 }

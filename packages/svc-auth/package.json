@@ -28,6 +28,7 @@
   "devDependencies": {
     "@nestia/e2e": "^0.3.6",
     "@nestia/sdk": "^1.6.5",
+    "@nestjs/cli": "^10.1.13",
     "@types/passport-local": "^1.0.35",
     "nestia": "^4.4.0",
     "ts-node": "^10.9.1",
