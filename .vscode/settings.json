@@ -1,0 +1,6 @@
+{
+  "sonarlint.connectedMode.project": {
+    "connectionId": "nekotoko-monorepo",
+    "projectKey": "fiqrisr_nekotoko-monorepo"
+  }
+}
