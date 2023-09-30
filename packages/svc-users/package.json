@@ -1,0 +1,39 @@
+{
+  "name": "@nekotoko/svc-users",
+  "version": "0.1.0",
+  "description": "Users service for Nekotoko",
+  "keywords": [],
+  "scripts": {
+    "build": "nest build",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "postinstall": "ts-patch install"
+  },
+  "dependencies": {
+    "@nestia/core": "^1.6.5",
+    "@nestjs/common": "^10.1.3",
+    "@nestjs/core": "^10.1.3",
+    "@nestjs/passport": "^10.0.0",
+    "nestjs-pino": "^3.4.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "pino-http": "^8.4.0",
+    "pino-pretty": "^10.2.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1",
+    "typia": "^4.2.3"
+  },
+  "devDependencies": {
+    "@nestia/e2e": "^0.3.6",
+    "@nestia/sdk": "^1.6.5",
+    "@nestjs/cli": "^10.1.13",
+    "@types/passport-local": "^1.0.35",
+    "nestia": "^4.4.0",
+    "prisma": "^5.3.1",
+    "ts-node": "^10.9.1",
+    "ts-patch": "^3.0.2",
+    "typescript": "^5.1.6"
+  }
+}
