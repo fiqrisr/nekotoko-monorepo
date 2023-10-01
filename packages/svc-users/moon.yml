@@ -4,3 +4,5 @@ language: 'typescript'
 tasks:
   dev:
     command: 'nest start --watch'
+  build:
+    command: 'nest build'
