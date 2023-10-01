@@ -1,6 +1,9 @@
 import { Module } from "@nestjs/common";
-import { AppController } from "./app.controller";
+import { ConfigModule } from "@nestjs/config";
 import { LoggerModule } from "nestjs-pino";
+
+import { AppController } from "./app.controller";
+import { UsersModule } from "./users/users.module";
 
 @Module({
   imports: [
@@ -13,7 +16,11 @@ import { LoggerModule } from "nestjs-pino";
           }
         }
       }
-    })
+    }),
+    ConfigModule.forRoot({
+      isGlobal: true
+    }),
+    UsersModule
   ],
   controllers: [AppController]
 })
