@@ -27,10 +27,10 @@
   ],
   "references": [
     {
-      "path": "packages/svc-auth"
+      "path": "apps/svc-auth"
     },
     {
-      "path": "packages/svc-users"
+      "path": "apps/svc-users"
     }
   ]
 }

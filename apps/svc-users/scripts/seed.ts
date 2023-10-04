@@ -30,7 +30,7 @@ async function seed() {
     console.error("Seeding database failed!");
     console.error(err);
   } finally {
-    void prisma.$disconnect();
+    prisma.$disconnect();
   }
 }
 
