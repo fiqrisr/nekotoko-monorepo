@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": "./src",
-    "outDir": "../../.moon/cache/types/packages/svc-users",
+    "outDir": "../../.moon/cache/types/apps/svc-users",
     "target": "es2016",
     "module": "commonjs",
     "esModuleInterop": true,
@@ -12,7 +12,9 @@
     "skipLibCheck": true,
     "strictNullChecks": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     },
     "plugins": [
       {
