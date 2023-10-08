@@ -3,7 +3,6 @@ import { TypedBody, TypedParam, TypedRoute } from "@nestia/core";
 
 import { UsersService } from "./users.service";
 import { CreateUserDto } from "./dtos/users.dto";
-import { DEFAULT_USER_SELECT } from "./users.constants";
 
 @Controller("users")
 export class UsersController {
@@ -11,25 +10,17 @@ export class UsersController {
 
   @TypedRoute.Post()
   async create(@TypedBody() user: CreateUserDto) {
-    return this.usersService.create({
-      data: user,
-      select: DEFAULT_USER_SELECT
-    });
+    return this.usersService.create(user);
   }
 
   @TypedRoute.Get()
   async findMany() {
-    return this.usersService.findMany({
-      select: DEFAULT_USER_SELECT
-    });
+    return this.usersService.findMany();
   }
 
   @TypedRoute.Get(":id")
   async findOne(@TypedParam("id") userId: string) {
-    return this.usersService.findOne({
-      where: { id: userId },
-      select: DEFAULT_USER_SELECT
-    });
+    return this.usersService.findOneById(userId);
   }
 
   @TypedRoute.Post(":id")
@@ -37,12 +28,11 @@ export class UsersController {
     @TypedParam("id") userId: string,
     @TypedBody() user: Partial<CreateUserDto>
   ) {
-    return this.usersService.update({
-      where: {
-        id: userId
-      },
-      data: user,
-      select: DEFAULT_USER_SELECT
-    });
+    return this.usersService.update(userId, user);
+  }
+
+  @TypedRoute.Delete(":id")
+  async delete(@TypedParam("id") userId: string) {
+    return this.usersService.delete(userId);
   }
 }

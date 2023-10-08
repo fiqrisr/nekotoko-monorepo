@@ -1,59 +1,67 @@
 import { Injectable } from "@nestjs/common";
 import { hash } from "argon2";
 
-import { Prisma } from "@/generated/prisma-client.ts";
-import { PrismaService } from "@/prisma/prisma.service";
 import { transformStringFieldUpdateInput } from "@/utils";
+
+import { DEFAULT_USER_SELECT } from "./users.constants";
+import { UsersRepository } from "./users.repository";
+import { CreateUserDto } from "./dtos/users.dto";
 
 @Injectable()
 export class UsersService {
-  constructor(private readonly prismaService: PrismaService) {}
+  constructor(private readonly userRepository: UsersRepository) {}
 
-  async create<T extends Prisma.UserCreateArgs>(
-    args: Prisma.SelectSubset<T, Prisma.UserCreateArgs>
-  ) {
-    return this.prismaService.user.create<T>({
-      ...args,
+  async create(data: CreateUserDto) {
+    const roles = ["user"];
+    const password = await hash(data.password);
+
+    return this.userRepository.create({
       data: {
-        ...args.data,
-        roles: args.data.roles ?? ["user"],
-        password: await hash(args.data.password)
-      }
+        ...data,
+        roles,
+        password
+      },
+      select: DEFAULT_USER_SELECT
     });
   }
 
-  async findMany<T extends Prisma.UserFindManyArgs>(
-    args: Prisma.SelectSubset<T, Prisma.UserFindManyArgs>
-  ) {
-    return this.prismaService.user.findMany(args);
-  }
-
-  async findOne<T extends Prisma.UserFindUniqueArgs>(
-    args: Prisma.SelectSubset<T, Prisma.UserFindUniqueArgs>
-  ) {
-    return this.prismaService.user.findUnique(args);
-  }
-
-  async update<T extends Prisma.UserUpdateArgs>(
-    args: Prisma.SelectSubset<T, Prisma.UserUpdateArgs>
-  ) {
-    return this.prismaService.user.update<T>({
-      ...args,
-      data: {
-        ...args.data,
-        password:
-          args.data.password &&
-          (await transformStringFieldUpdateInput(
-            args.data.password,
-            (password) => hash(password)
-          ))
-      }
+  async findMany() {
+    return this.userRepository.findMany({
+      select: DEFAULT_USER_SELECT
     });
   }
 
-  async delete<T extends Prisma.UserDeleteArgs>(
-    args: Prisma.SelectSubset<T, Prisma.UserDeleteArgs>
-  ) {
-    return this.prismaService.user.delete(args);
+  async findOneById(id: string) {
+    return this.userRepository.findOne({
+      where: { id },
+      select: DEFAULT_USER_SELECT
+    });
+  }
+
+  async update(userId: string, data: Partial<CreateUserDto>) {
+    let password = null;
+
+    if (data.password) {
+      password = await transformStringFieldUpdateInput(
+        data.password,
+        (password) => hash(password)
+      );
+    }
+
+    return this.userRepository.update({
+      where: { id: userId },
+      data: {
+        ...data,
+        ...(password ? { password } : {})
+      },
+      select: DEFAULT_USER_SELECT
+    });
+  }
+
+  async delete(userId: string) {
+    return this.userRepository.delete({
+      where: { id: userId },
+      select: DEFAULT_USER_SELECT
+    });
   }
 }
