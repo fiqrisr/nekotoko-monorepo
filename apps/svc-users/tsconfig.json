@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../tsconfig.options.json",
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": "./src",
@@ -14,6 +14,12 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@nekotoko/shared-nest-utils": [
+        "../../libs/shared-nest-utils/src/index.ts"
+      ],
+      "@nekotoko/shared-nest-utils/*": [
+        "../../libs/shared-nest-utils/src/*"
       ]
     },
     "plugins": [
@@ -34,5 +40,10 @@
     "jest.config.ts",
     "**/*.spec.ts",
     "**/*.test.ts"
+  ],
+  "references": [
+    {
+      "path": "../../libs/shared-nest-utils"
+    }
   ]
 }

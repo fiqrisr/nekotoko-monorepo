@@ -273,3 +273,15 @@ fabric.properties
 # moon
 .moon/cache
 .moon/docker
+
+# build
+build/
+coverage/
+cjs/
+dist/
+dts/
+esm/
+lib/
+mjs/
+tmp/
+umd/

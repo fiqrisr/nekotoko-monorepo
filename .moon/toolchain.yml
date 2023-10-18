@@ -47,10 +47,10 @@ typescript:
   createMissingConfig: true
 
   # Name of `tsconfig.json` file in each project root.
-  # projectConfigFileName: 'tsconfig.json'
+  projectConfigFileName: 'tsconfig.json'
 
   # Name of `tsconfig.json` file in the workspace root.
-  rootConfigFileName: 'tsconfig.base.json'
+  rootConfigFileName: 'tsconfig.json'
 
   # Name of the config file in the workspace root that defines shared compiler
   # options for all project reference based config files.
