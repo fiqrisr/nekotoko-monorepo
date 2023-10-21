@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Users service for Nekotoko",
   "keywords": [],
+  "private": true,
   "scripts": {
     "build": "nest build",
     "start": "nest start",
@@ -13,6 +14,7 @@
     "generate": "prisma generate --schema=./prisma/schema.prisma"
   },
   "dependencies": {
+    "@nekotoko/shared-nest-utils": "workspace:*",
     "@nestia/core": "^1.6.5",
     "@nestjs/common": "^10.1.3",
     "@nestjs/config": "^3.1.1",

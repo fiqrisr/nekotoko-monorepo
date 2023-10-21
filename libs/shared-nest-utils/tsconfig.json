@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.options.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "outDir": "../../.moon/cache/types/libs/shared-nest-utils"
+  },
+  "include": ["src/**/*"],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.mjs.json"
+    }
+  ]
+}

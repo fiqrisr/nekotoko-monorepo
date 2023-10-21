@@ -1,5 +1,5 @@
 import { hash } from "argon2";
-import { PrismaClient } from "../src/generated/prisma-client.ts";
+import { PrismaClient } from "@prisma/client";
 
 async function seed() {
   console.info("Seeding database...");

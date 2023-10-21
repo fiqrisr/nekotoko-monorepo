@@ -1,8 +1,7 @@
-import { Controller } from "@nestjs/common";
 import { TypedBody, TypedParam, TypedRoute } from "@nestia/core";
-
-import { UsersService } from "./users.service";
+import { Controller } from "@nestjs/common";
 import { CreateUserDto } from "./dtos/users.dto";
+import { UsersService } from "./users.service";
 
 @Controller("users")
 export class UsersController {

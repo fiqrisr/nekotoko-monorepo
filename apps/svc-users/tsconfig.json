@@ -2,12 +2,13 @@
   "extends": "../../tsconfig.options.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "rootDir": "./src",
+    "rootDir": "src",
     "outDir": "../../.moon/cache/types/apps/svc-users",
-    "target": "es2016",
-    "module": "commonjs",
+    "removeComments": true,
     "esModuleInterop": true,
+    "emitDeclarationOnly": false,
     "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
@@ -33,17 +34,14 @@
       }
     ]
   },
-  "exclude": [
-    "./dist",
-    "./scripts",
-    "./src/generated",
-    "jest.config.ts",
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ],
   "references": [
     {
       "path": "../../libs/shared-nest-utils"
     }
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "scripts"
   ]
 }

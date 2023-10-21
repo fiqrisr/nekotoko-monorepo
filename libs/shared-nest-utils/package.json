@@ -1,0 +1,48 @@
+{
+  "name": "@nekotoko/shared-nest-utils",
+  "version": "0.0.1",
+  "packemon": {
+    "format": [
+      "lib",
+      "mjs"
+    ],
+    "platform": "node"
+  },
+  "engines": {
+    "node": ">=16.12.0",
+    "npm": ">=6.14.0"
+  },
+  "files": [
+    "lib/**/*",
+    "mjs/**/*",
+    "src/**/*"
+  ],
+  "dependencies": {
+    "@nestjs/common": "^10.1.3",
+    "@nestjs/core": "^10.1.3",
+    "class-validator": "^0.14.0"
+  },
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    "./*": {
+      "types": "./lib/*.d.ts",
+      "node": {
+        "types": "./mjs/*.d.ts",
+        "import": "./mjs/*.mjs",
+        "default": "./lib/*.js"
+      },
+      "default": "./lib/*.js"
+    },
+    ".": {
+      "types": "./lib/index.d.ts",
+      "node": {
+        "types": "./mjs/index.d.ts",
+        "import": "./mjs/index.mjs",
+        "default": "./lib/index.js"
+      },
+      "default": "./lib/index.js"
+    }
+  }
+}
