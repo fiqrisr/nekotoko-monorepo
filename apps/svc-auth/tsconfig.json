@@ -1,15 +1,21 @@
 {
   "extends": "../../tsconfig.options.json",
   "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "../../.moon/cache/types/apps/svc-auth",
-    "target": "es2016",
-    "module": "commonjs",
+    "rootDir": "src",
+    "outDir": "dist",
+    "removeComments": true,
     "esModuleInterop": true,
+    "emitDeclarationOnly": false,
     "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+    },
     "plugins": [
       {
         "transform": "@nestia/core/lib/transform",
@@ -21,10 +27,12 @@
       }
     ]
   },
-  "exclude": [
-    "./dist",
-    "jest.config.ts",
-    "**/*.spec.ts",
-    "**/*.test.ts"
+  "include": [
+    "src/**/*.ts"
+  ],
+  "references": [
+    {
+      "path": "../../libs/shared-nest-utils"
+    }
   ]
 }

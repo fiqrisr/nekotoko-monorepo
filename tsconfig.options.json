@@ -12,11 +12,8 @@
     "declarationMap": true,
     "incremental": true,
     "noEmit": false,
-    "noEmitOnError": true,
-    "skipLibCheck": true,
     "verbatimModuleSyntax": false,
     "experimentalDecorators": true,
     "emitDeclarationOnly": true,
-    "resolveJsonModule": true
   }
 }

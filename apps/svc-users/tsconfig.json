@@ -2,8 +2,7 @@
   "extends": "../../tsconfig.options.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "rootDir": "src",
-    "outDir": "../../.moon/cache/types/apps/svc-users",
+    "outDir": "dist",
     "removeComments": true,
     "esModuleInterop": true,
     "emitDeclarationOnly": false,
@@ -15,12 +14,6 @@
     "paths": {
       "@/*": [
         "./src/*"
-      ],
-      "@nekotoko/shared-nest-utils": [
-        "../../libs/shared-nest-utils/src/index.ts"
-      ],
-      "@nekotoko/shared-nest-utils/*": [
-        "../../libs/shared-nest-utils/src/*"
       ]
     },
     "plugins": [
@@ -38,10 +31,5 @@
     {
       "path": "../../libs/shared-nest-utils"
     }
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "scripts"
   ]
 }

@@ -9,7 +9,7 @@
     },
     "outDir": "../../.moon/cache/types/libs/shared-nest-utils"
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*.ts"],
   "references": [
     {
       "path": "./tsconfig.lib.json"
