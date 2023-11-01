@@ -10,9 +10,6 @@ import { UsersModule } from "./users/users.module";
     LoggerModule.forRoot({
       pinoHttp: {
         transport: {
-          options: {
-            singleLine: true
-          },
           target: "pino-pretty"
         }
       }

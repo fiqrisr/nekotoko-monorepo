@@ -1,4 +1,4 @@
-import { Prisma } from "@prisma/client";
+import { Prisma, User } from "@prisma/client";
 
 export const DEFAULT_USER_SELECT: Prisma.UserSelect = {
   id: true,
@@ -8,3 +8,5 @@ export const DEFAULT_USER_SELECT: Prisma.UserSelect = {
   created_at: true,
   updated_at: true
 };
+
+export type UserWithoutPassword = Omit<User, "password">;

@@ -47,15 +47,18 @@ importers:
 
   apps/svc-auth:
     dependencies:
+      '@nekotoko/shared-nest-utils':
+        specifier: workspace:*
+        version: link:../../libs/shared-nest-utils
       '@nestia/core':
         specifier: ^1.6.5
-        version: 1.6.5(@nestia/fetcher@2.2.5)(@nestjs/common@10.1.3)(@nestjs/core@10.1.3)(@nestjs/platform-express@10.2.7)(@nestjs/platform-fastify@10.2.7)(raw-body@2.5.2)(reflect-metadata@0.1.13)(rxjs@7.8.1)(typescript@5.1.6)(typia@4.2.3)
+        version: 1.6.5(@nestia/fetcher@2.3.4)(@nestjs/common@10.1.3)(@nestjs/core@10.2.7)(@nestjs/platform-express@10.2.7)(@nestjs/platform-fastify@10.2.7)(raw-body@2.5.2)(reflect-metadata@0.1.13)(rxjs@7.8.1)(typescript@5.1.6)(typia@4.2.3)
       '@nestjs/common':
         specifier: ^10.1.3
         version: 10.1.3(class-validator@0.14.0)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       '@nestjs/core':
         specifier: ^10.1.3
-        version: 10.1.3(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1)
+        version: 10.2.7(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       '@nestjs/passport':
         specifier: ^10.0.0
         version: 10.0.0(@nestjs/common@10.1.3)(passport@0.6.0)
@@ -89,7 +92,7 @@ importers:
         version: 0.3.6
       '@nestia/sdk':
         specifier: ^1.6.5
-        version: 1.6.5(@nestia/fetcher@2.2.5)(@nestjs/common@10.1.3)(@nestjs/core@10.1.3)(reflect-metadata@0.1.13)(ts-node@10.9.1)(typescript@5.1.6)(typia@4.2.3)
+        version: 1.6.5(@nestia/fetcher@2.3.4)(@nestjs/common@10.1.3)(@nestjs/core@10.2.7)(reflect-metadata@0.1.13)(ts-node@10.9.1)(typescript@5.1.6)(typia@4.2.3)
       '@nestjs/cli':
         specifier: ^10.1.13
         version: 10.1.13(esbuild@0.18.20)
@@ -116,7 +119,7 @@ importers:
         version: link:../../libs/shared-nest-utils
       '@nestia/core':
         specifier: ^1.6.5
-        version: 1.6.5(@nestia/fetcher@2.2.5)(@nestjs/common@10.1.3)(@nestjs/core@10.1.3)(@nestjs/platform-express@10.2.7)(@nestjs/platform-fastify@10.2.7)(raw-body@2.5.2)(reflect-metadata@0.1.13)(rxjs@7.8.1)(typescript@5.1.6)(typia@4.2.3)
+        version: 1.6.5(@nestia/fetcher@2.3.4)(@nestjs/common@10.1.3)(@nestjs/core@10.2.7)(@nestjs/platform-express@10.2.7)(@nestjs/platform-fastify@10.2.7)(raw-body@2.5.2)(reflect-metadata@0.1.13)(rxjs@7.8.1)(typescript@5.1.6)(typia@4.2.3)
       '@nestjs/common':
         specifier: ^10.1.3
         version: 10.1.3(class-validator@0.14.0)(reflect-metadata@0.1.13)(rxjs@7.8.1)
@@ -124,8 +127,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1(@nestjs/common@10.1.3)(reflect-metadata@0.1.13)
       '@nestjs/core':
-        specifier: ^10.1.3
-        version: 10.1.3(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1)
+        specifier: ^10.2.7
+        version: 10.2.7(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       '@nestjs/passport':
         specifier: ^10.0.0
         version: 10.0.0(@nestjs/common@10.1.3)(passport@0.6.0)
@@ -165,7 +168,7 @@ importers:
         version: 0.3.6
       '@nestia/sdk':
         specifier: ^1.6.5
-        version: 1.6.5(@nestia/fetcher@2.2.5)(@nestjs/common@10.1.3)(@nestjs/core@10.1.3)(reflect-metadata@0.1.13)(ts-node@10.9.1)(typescript@5.1.6)(typia@4.2.3)
+        version: 1.6.5(@nestia/fetcher@2.3.4)(@nestjs/common@10.1.3)(@nestjs/core@10.2.7)(reflect-metadata@0.1.13)(ts-node@10.9.1)(typescript@5.1.6)(typia@4.2.3)
       '@nestjs/cli':
         specifier: ^10.1.13
         version: 10.1.13(esbuild@0.18.20)
@@ -195,7 +198,7 @@ importers:
         version: 10.1.3(class-validator@0.14.0)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       '@nestjs/core':
         specifier: ^10.1.3
-        version: 10.1.3(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1)
+        version: 10.2.7(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       class-validator:
         specifier: ^0.14.0
         version: 0.14.0
@@ -2077,7 +2080,7 @@ packages:
     dependencies:
       ajv: 8.12.0
       ajv-formats: 2.1.1(ajv@8.12.0)
-      fast-uri: 2.2.0
+      fast-uri: 2.3.0
     dev: false
 
   /@fastify/cors@8.4.0:
@@ -2214,65 +2217,65 @@ packages:
     dependencies:
       detect-libc: 2.0.2
     optionalDependencies:
-      '@moonrepo/core-linux-arm64-gnu': 1.15.1
-      '@moonrepo/core-linux-arm64-musl': 1.15.1
-      '@moonrepo/core-linux-x64-gnu': 1.15.1
-      '@moonrepo/core-linux-x64-musl': 1.15.1
-      '@moonrepo/core-macos-arm64': 1.15.1
-      '@moonrepo/core-macos-x64': 1.15.1
-      '@moonrepo/core-windows-x64-msvc': 1.15.1
+      '@moonrepo/core-linux-arm64-gnu': 1.16.0
+      '@moonrepo/core-linux-arm64-musl': 1.16.0
+      '@moonrepo/core-linux-x64-gnu': 1.16.0
+      '@moonrepo/core-linux-x64-musl': 1.16.0
+      '@moonrepo/core-macos-arm64': 1.16.0
+      '@moonrepo/core-macos-x64': 1.16.0
+      '@moonrepo/core-windows-x64-msvc': 1.16.0
     dev: true
 
-  /@moonrepo/core-linux-arm64-gnu@1.15.1:
-    resolution: {integrity: sha512-p7aL+Ad4iTJm+Tr0vctwVxcrQjNXHBIBn4bS5LL/YNT7utqhO0UNlAsnA+7WjcVo/JWERjj5MfWj37uBtY/Ksg==}
+  /@moonrepo/core-linux-arm64-gnu@1.16.0:
+    resolution: {integrity: sha512-KRIVHqh4hyi5D/QIx2J1udZjHqZ1+vw/oQRJk6lAqwvhzsICg5Y6AsnCOE5ULkCW6SP380Akp4KHPKPJ5LpFQw==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@moonrepo/core-linux-arm64-musl@1.15.1:
-    resolution: {integrity: sha512-u789CsBxWPIh+WKgiPW6N81RXLLqMbjauPNLW7mlcoCqi0li14iSTRV92g0seFQpBg/IARLQLbYojAswbxmpjw==}
+  /@moonrepo/core-linux-arm64-musl@1.16.0:
+    resolution: {integrity: sha512-OiodBQKAc4FeHHd5ibMUJav9qqZktTxe1YsVLNR6BFcfiVQ3Wiy6IfYiX3rhyn0kCDJAfubZmOBm1tyi0BN9GQ==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@moonrepo/core-linux-x64-gnu@1.15.1:
-    resolution: {integrity: sha512-bAZkmEdPJz9lX7XRiVUkwyKqkQlMkqFjPLQifKA331vb039oxp6thwigWhVaoEO6isEt3zdu0nncAgUxZyCF/A==}
+  /@moonrepo/core-linux-x64-gnu@1.16.0:
+    resolution: {integrity: sha512-Iuk549R7mY2pVnOHshsy8H3ykuxlDYg19+iHYz758KAFx1bmqv3+mmvJR6IYdKy6G8TaVTqGPL+ZEz+mq0bEqw==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@moonrepo/core-linux-x64-musl@1.15.1:
-    resolution: {integrity: sha512-Uln2W9rjqHqkDyn+MmCmjfrCqXWZG7yvnH3f9gpzpvmuTah31054+IVG9v1EYJr4P3y6O84exMnM8Xmwu2xHkQ==}
+  /@moonrepo/core-linux-x64-musl@1.16.0:
+    resolution: {integrity: sha512-3diX6kKiOo8RxZhfU8kojKUdsP4OTN/jc21JN7Xp31rBecn9UPyS9sf9zoxgYIiNfkkUzkEa6sPx5IiKagyRxQ==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@moonrepo/core-macos-arm64@1.15.1:
-    resolution: {integrity: sha512-mT0MN1roNTg4Ln0Nq4ofIY08w/zRlTa/f5Clhzo3IXcMj3ZT7dtTZjUCb8SSvH/h0TYk+ut/HOp5hd2q+6vLMg==}
+  /@moonrepo/core-macos-arm64@1.16.0:
+    resolution: {integrity: sha512-OXklBpJWKXgqWT9knojMew8Op/ElsT5Xuqq7irDUHwGcXsXk11369PDTjkbXdgz0hIYsfWlKmjnxHjvCq5qtvw==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@moonrepo/core-macos-x64@1.15.1:
-    resolution: {integrity: sha512-5R3ps+5sBjsFq7x5Vwho7+JeOtrG5NjTSKZHY3R62Onz/Vu99z0EVQ4vzp5ZuElCvlX234lE8jMUxTxff9dasQ==}
+  /@moonrepo/core-macos-x64@1.16.0:
+    resolution: {integrity: sha512-ctwbPlMg46z7ACUW8r7hyq95O8gduePYaoV1rq0t2U2i+xBs4K387dbWPRSmDL7J2v3vTqP6i6E/Tj9k/zxNrQ==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@moonrepo/core-windows-x64-msvc@1.15.1:
-    resolution: {integrity: sha512-dImrk90sYR+JJpeVv3Gk6SelOBnkkrgFxk595G8WktK8+fsHgyl0+sNjS/OZMRArzcgeHdbuXhpD6DY/cY9YBA==}
+  /@moonrepo/core-windows-x64-msvc@1.16.0:
+    resolution: {integrity: sha512-XS9pMlT3AKiAcFKJfCzJghU6O2qSAF2+sEDO4JPExuwTql+gIku1iXYycTfE9aO8ZZaeWa20iAsENs7WMUBBFA==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
@@ -2288,7 +2291,7 @@ packages:
       execa: 5.1.1
     dev: true
 
-  /@nestia/core@1.6.5(@nestia/fetcher@2.2.5)(@nestjs/common@10.1.3)(@nestjs/core@10.1.3)(@nestjs/platform-express@10.2.7)(@nestjs/platform-fastify@10.2.7)(raw-body@2.5.2)(reflect-metadata@0.1.13)(rxjs@7.8.1)(typescript@5.1.6)(typia@4.2.3):
+  /@nestia/core@1.6.5(@nestia/fetcher@2.3.4)(@nestjs/common@10.1.3)(@nestjs/core@10.2.7)(@nestjs/platform-express@10.2.7)(@nestjs/platform-fastify@10.2.7)(raw-body@2.5.2)(reflect-metadata@0.1.13)(rxjs@7.8.1)(typescript@5.1.6)(typia@4.2.3):
     resolution: {integrity: sha512-nUGB2DwKdUh46JpBYzTSxxWNnIekVFQBAOZy1MrCbLcFBPhHwsrk8LC/i9LC6NMw+EqwPgDG9n5tLFLqMgTjxw==}
     peerDependencies:
       '@nestia/fetcher': '>= 1.6.5'
@@ -2302,11 +2305,11 @@ packages:
       typescript: '>= 4.8.0'
       typia: '>= 4.2.3'
     dependencies:
-      '@nestia/fetcher': 2.2.5(typescript@5.1.6)
+      '@nestia/fetcher': 2.3.4(typescript@5.1.6)
       '@nestjs/common': 10.1.3(class-validator@0.14.0)(reflect-metadata@0.1.13)(rxjs@7.8.1)
-      '@nestjs/core': 10.1.3(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1)
-      '@nestjs/platform-express': 10.2.7(@nestjs/common@10.1.3)(@nestjs/core@10.1.3)
-      '@nestjs/platform-fastify': 10.2.7(@nestjs/common@10.1.3)(@nestjs/core@10.1.3)
+      '@nestjs/core': 10.2.7(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1)
+      '@nestjs/platform-express': 10.2.7(@nestjs/common@10.1.3)(@nestjs/core@10.2.7)
+      '@nestjs/platform-fastify': 10.2.7(@nestjs/common@10.1.3)(@nestjs/core@10.2.7)
       detect-ts-node: 1.0.5
       glob: 7.2.3
       raw-body: 2.5.2
@@ -2324,8 +2327,8 @@ packages:
       tstl: 2.5.13
     dev: true
 
-  /@nestia/fetcher@2.2.5(typescript@5.1.6):
-    resolution: {integrity: sha512-I/V60cwuJkvxm/mF6IC/jocsbsgjJbaolpQOrvyPo19XS92jCcCGmQYhodI7luPYJ4m/STpPhj1c6+29D2CaVw==}
+  /@nestia/fetcher@2.3.4(typescript@5.1.6):
+    resolution: {integrity: sha512-EXrGCWUNEFoLVH2jQyYTaK0WQkiM1SmMxXQdGtUFCUaWFyxk5sTKj9Np6iFbh+a9LcctVmn+RRSikNxHyMxBPw==}
     peerDependencies:
       typescript: '>= 4.8.0'
     dependencies:
@@ -2335,7 +2338,7 @@ packages:
     transitivePeerDependencies:
       - encoding
 
-  /@nestia/sdk@1.6.5(@nestia/fetcher@2.2.5)(@nestjs/common@10.1.3)(@nestjs/core@10.1.3)(reflect-metadata@0.1.13)(ts-node@10.9.1)(typescript@5.1.6)(typia@4.2.3):
+  /@nestia/sdk@1.6.5(@nestia/fetcher@2.3.4)(@nestjs/common@10.1.3)(@nestjs/core@10.2.7)(reflect-metadata@0.1.13)(ts-node@10.9.1)(typescript@5.1.6)(typia@4.2.3):
     resolution: {integrity: sha512-K0atMYlFid3zL0XifW5tUOX+QheHL7qJRrUheL/foxD9Yf2L063TKj4ToJWgLoh1aefQMh5xv4MjngRrkvS6pA==}
     hasBin: true
     peerDependencies:
@@ -2347,9 +2350,9 @@ packages:
       typescript: '>= 4.8.0'
       typia: '>= 4.2.3'
     dependencies:
-      '@nestia/fetcher': 2.2.5(typescript@5.1.6)
+      '@nestia/fetcher': 2.3.4(typescript@5.1.6)
       '@nestjs/common': 10.1.3(class-validator@0.14.0)(reflect-metadata@0.1.13)(rxjs@7.8.1)
-      '@nestjs/core': 10.1.3(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1)
+      '@nestjs/core': 10.2.7(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       cli: 1.0.1
       glob: 7.2.3
       path-to-regexp: 6.2.1
@@ -2441,8 +2444,8 @@ packages:
       uuid: 9.0.0
     dev: false
 
-  /@nestjs/core@10.1.3(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1):
-    resolution: {integrity: sha512-VzK54TuacC3Vmq3b5xTyMVTlDNJeKbjpKfV9fNqm4TbIBm8ZPo3FC0osJAbAK4XwbVvv2Flq1yA3CutasupVjw==}
+  /@nestjs/core@10.2.7(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1):
+    resolution: {integrity: sha512-5GSu53QUUcwX17sNmlJPa1I0wIeAZOKbedyVuQx0ZAwWVa9g0wJBbsNP+R4EJ+j5Dkdzt/8xkiZvnKt8RFRR8g==}
     requiresBuild: true
     peerDependencies:
       '@nestjs/common': ^10.0.0
@@ -2460,14 +2463,14 @@ packages:
         optional: true
     dependencies:
       '@nestjs/common': 10.1.3(class-validator@0.14.0)(reflect-metadata@0.1.13)(rxjs@7.8.1)
-      '@nestjs/platform-express': 10.2.7(@nestjs/common@10.1.3)(@nestjs/core@10.1.3)
+      '@nestjs/platform-express': 10.2.7(@nestjs/common@10.1.3)(@nestjs/core@10.2.7)
       '@nuxtjs/opencollective': 0.3.2
       fast-safe-stringify: 2.1.1
       iterare: 1.2.1
       path-to-regexp: 3.2.0
       reflect-metadata: 0.1.13
       rxjs: 7.8.1
-      tslib: 2.6.1
+      tslib: 2.6.2
       uid: 2.0.2
     transitivePeerDependencies:
       - encoding
@@ -2482,14 +2485,14 @@ packages:
       passport: 0.6.0
     dev: false
 
-  /@nestjs/platform-express@10.2.7(@nestjs/common@10.1.3)(@nestjs/core@10.1.3):
+  /@nestjs/platform-express@10.2.7(@nestjs/common@10.1.3)(@nestjs/core@10.2.7):
     resolution: {integrity: sha512-p+kp6aJtkgAdVpUrCVmM6MKtOvjsbt7QofBiZMidjYesZkMeG5gZ1D2SK8XzvQ8VXHJfFgEdY2xcKGB+wJLOYQ==}
     peerDependencies:
       '@nestjs/common': ^10.0.0
       '@nestjs/core': ^10.0.0
     dependencies:
       '@nestjs/common': 10.1.3(class-validator@0.14.0)(reflect-metadata@0.1.13)(rxjs@7.8.1)
-      '@nestjs/core': 10.1.3(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1)
+      '@nestjs/core': 10.2.7(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       body-parser: 1.20.2
       cors: 2.8.5
       express: 4.18.2
@@ -2498,7 +2501,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@nestjs/platform-fastify@10.2.7(@nestjs/common@10.1.3)(@nestjs/core@10.1.3):
+  /@nestjs/platform-fastify@10.2.7(@nestjs/common@10.1.3)(@nestjs/core@10.2.7):
     resolution: {integrity: sha512-m/OADHxB7yY6TyADLmXJ3BCadG110g/O0nLj2LQDNRiNLiYrgpV3D/cGOcMqlQOG30GZ7BKl8Cq8CsKVtMhzZA==}
     peerDependencies:
       '@fastify/static': ^6.0.0
@@ -2515,7 +2518,7 @@ packages:
       '@fastify/formbody': 7.4.0
       '@fastify/middie': 8.3.0
       '@nestjs/common': 10.1.3(class-validator@0.14.0)(reflect-metadata@0.1.13)(rxjs@7.8.1)
-      '@nestjs/core': 10.1.3(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1)
+      '@nestjs/core': 10.2.7(@nestjs/common@10.1.3)(@nestjs/platform-express@10.2.7)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       fastify: 4.23.2
       light-my-request: 5.11.0
       path-to-regexp: 3.2.0
@@ -5034,7 +5037,7 @@ packages:
       ajv: 8.12.0
       ajv-formats: 2.1.1(ajv@8.12.0)
       fast-deep-equal: 3.1.3
-      fast-uri: 2.2.0
+      fast-uri: 2.3.0
       rfdc: 1.3.0
     dev: false
 
@@ -5056,8 +5059,8 @@ packages:
   /fast-safe-stringify@2.1.1:
     resolution: {integrity: sha512-W+KJc2dmILlPplD/H4K9l9LcAHAfPtP6BY84uVLXQ6Evcz9Lcg33Y2z1IVblT6xdY54PXYVHEv+0Wpq8Io6zkA==}
 
-  /fast-uri@2.2.0:
-    resolution: {integrity: sha512-cIusKBIt/R/oI6z/1nyfe2FvGKVTohVRfvkOhvx0nCEW+xf5NoCXjAHcWp93uOUBchzYcsvPlrapAdX1uW+YGg==}
+  /fast-uri@2.3.0:
+    resolution: {integrity: sha512-eel5UKGn369gGEWOqBShmFJWfq/xSJvsgDzgLYC845GneayWvXBf0lJCBn5qTABfewy1ZDPoaR5OZCP+kssfuw==}
     dev: false
 
   /fastify-plugin@4.5.1:
@@ -5076,8 +5079,8 @@ packages:
       fast-json-stringify: 5.8.0
       find-my-way: 7.7.0
       light-my-request: 5.11.0
-      pino: 8.16.0
-      process-warning: 2.2.0
+      pino: 8.16.1
+      process-warning: 2.3.0
       proxy-addr: 2.0.7
       rfdc: 1.3.0
       secure-json-parse: 2.7.0
@@ -6101,7 +6104,7 @@ packages:
     resolution: {integrity: sha512-qkFCeloXCOMpmEdZ/MV91P8AT4fjwFXWaAFz3lUeStM8RcoM1ks4J/F8r1b3r6y/H4u3ACEJ1T+Gv5bopj7oDA==}
     dependencies:
       cookie: 0.5.0
-      process-warning: 2.2.0
+      process-warning: 2.3.0
       set-cookie-parser: 2.6.0
     dev: false
 
@@ -6875,9 +6878,9 @@ packages:
     resolution: {integrity: sha512-9I1eRLxsujQJwLQTrHBU0wDlwnry2HzV2TlDwAsmZ9nT3Y2NQBLrz+DYp73L4i11vl/eudnFT8Eg0Kp62tMwEw==}
     dependencies:
       get-caller-file: 2.0.5
-      pino: 8.16.0
+      pino: 8.16.1
       pino-std-serializers: 6.2.2
-      process-warning: 2.2.0
+      process-warning: 2.3.0
     dev: false
 
   /pino-pretty@10.2.0:
@@ -6904,8 +6907,8 @@ packages:
     resolution: {integrity: sha512-cHjPPsE+vhj/tnhCy/wiMh3M3z3h/j15zHQX+S9GkTBgqJuTuJzYJ4gUyACLhDaJ7kk9ba9iRDmbH2tJU03OiA==}
     dev: false
 
-  /pino@8.16.0:
-    resolution: {integrity: sha512-UUmvQ/7KTZt/vHjhRrnyS7h+J7qPBQnpG80V56xmIC+o9IqYmQOw/UIny9S9zYDfRBR0ClouCr464EkBMIT7Fw==}
+  /pino@8.16.1:
+    resolution: {integrity: sha512-3bKsVhBmgPjGV9pyn4fO/8RtoVDR8ssW1ev819FsRXlRNgW8gR/9Kx+gCK4UPWd4JjrRDLWpzd/pb1AyWm3MGA==}
     hasBin: true
     dependencies:
       atomic-sleep: 1.0.0
@@ -6913,7 +6916,7 @@ packages:
       on-exit-leak-free: 2.1.2
       pino-abstract-transport: 1.1.0
       pino-std-serializers: 6.2.2
-      process-warning: 2.2.0
+      process-warning: 2.3.0
       quick-format-unescaped: 4.0.4
       real-require: 0.2.0
       safe-stable-stringify: 2.4.3
@@ -6976,8 +6979,8 @@ packages:
   /process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
 
-  /process-warning@2.2.0:
-    resolution: {integrity: sha512-/1WZ8+VQjR6avWOgHeEPd7SDQmFQ1B5mC1eRXsCm5TarlNmx/wCsa5GEaxGm05BORRtyG/Ex/3xq3TuRvq57qg==}
+  /process-warning@2.3.0:
+    resolution: {integrity: sha512-N6mp1+2jpQr3oCFMz6SeHRGbv6Slb20bRhj4v3xR99HqNToAcOe1MFOp4tytyzOfJn+QtN8Rf7U/h2KAn4kC6g==}
     dev: false
 
   /process@0.11.10:

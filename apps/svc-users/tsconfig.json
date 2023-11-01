@@ -6,6 +6,7 @@
     "removeComments": true,
     "esModuleInterop": true,
     "emitDeclarationOnly": false,
+    "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "incremental": true,

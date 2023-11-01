@@ -1,17 +1,19 @@
-import { Injectable } from "@nestjs/common";
 import { hash } from "argon2";
+import { Injectable } from "@nestjs/common";
+import { CreateUserDto } from "./dtos/users.dto";
+import {
+  DEFAULT_USER_SELECT,
+  type UserWithoutPassword
+} from "./users.constants";
+import { UsersRepository } from "./users.repository";
 
 import { transformStringFieldUpdateInput } from "@/utils";
-
-import { DEFAULT_USER_SELECT } from "./users.constants";
-import { UsersRepository } from "./users.repository";
-import { CreateUserDto } from "./dtos/users.dto";
 
 @Injectable()
 export class UsersService {
   constructor(private readonly userRepository: UsersRepository) {}
 
-  async create(data: CreateUserDto) {
+  async create(data: CreateUserDto): Promise<UserWithoutPassword> {
     const roles = ["user"];
     const password = await hash(data.password);
 
@@ -25,20 +27,23 @@ export class UsersService {
     });
   }
 
-  async findMany() {
+  async findMany(): Promise<UserWithoutPassword[]> {
     return this.userRepository.findMany({
       select: DEFAULT_USER_SELECT
     });
   }
 
-  async findOneById(id: string) {
+  async findOneById(id: string): Promise<UserWithoutPassword | null> {
     return this.userRepository.findOne({
       where: { id },
       select: DEFAULT_USER_SELECT
     });
   }
 
-  async update(userId: string, data: Partial<CreateUserDto>) {
+  async update(
+    userId: string,
+    data: Partial<CreateUserDto>
+  ): Promise<UserWithoutPassword> {
     let password = null;
 
     if (data.password) {
